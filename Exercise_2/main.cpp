@@ -1,4 +1,4 @@
-#include <string>
+п»ї#include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -26,7 +26,7 @@ int main()
 				}
 			}
 		}
-		else throw exception("Не удалось открыть файл!");
+		else throw exception("РќРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р»!");
 
 		cout << ss.str();
 	}
