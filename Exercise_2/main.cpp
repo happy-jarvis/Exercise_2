@@ -14,15 +14,26 @@ int main()
 	string line;
 	stringstream ss;
 
-	while (getline(in, line))
+	try
 	{
-		if (check(line)) 
+		if (in.is_open())
 		{
-			ss << line << '\n';
+			while (getline(in, line))
+			{
+				if (check(line))
+				{
+					ss << line << '\n';
+				}
+			}
 		}
-	}
+		else throw exception("Не удалось открыть файл!");
 
-	cout << ss.str();
+		cout << ss.str();
+	}
+	catch (const exception &err)
+	{
+		cerr << err.what() << endl;
+	}
 	in.close();		
 
 	system("pause");
